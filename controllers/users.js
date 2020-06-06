@@ -1,5 +1,7 @@
 const User = require('../models/User')
 const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const SECRET = process.env.SECRET;
 
 const signup = (req, res) => {
     const { name, email, password } = req.body;
@@ -24,13 +26,23 @@ const signup = (req, res) => {
                   newUser.password = hash;
                   newUser.save()
                     .then(user => {
-                        res.json({
-                          user: {
-                            id: user.id,
-                            name: user.name,
-                            email: user.email
-                          }
-                      })
+
+                      jwt.sign( 
+                        { id: user.id },
+                        SECRET,
+                        { expiresIn: "24h" },
+                        (err, token) => {
+                          if(err) throw err;
+                          res.json({
+                            token,
+                            user: {
+                              id: user.id,
+                              name: user.name,
+                              email: user.email
+                            }
+                        })
+                        }
+                      )
                   })
               })
          })
