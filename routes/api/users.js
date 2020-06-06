@@ -1,11 +1,10 @@
 const express = require('express');
 const router = express.Router();
+const usersCtrl = require('../../controllers/users');
 
-const User = require('../../models/User')
+//  Public Routes
+router.post('/signup', usersCtrl.signup)
 
 
-router.post('/', (req, res) => {
-    res.send('registered');
-})
 
 module.exports = router;
