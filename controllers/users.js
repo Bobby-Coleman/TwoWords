@@ -29,13 +29,7 @@ const signup = (req, res) => {
                   newUser.password = hash;
                   newUser.save()
                     .then(user => {
-
-                      jwt.sign( 
-                        { id: user.id },
-                        SECRET,
-                        { expiresIn: "24h" },
-                        (err, token) => {
-                          if(err) throw err;
+                        const token = createJWT(user)
                           res.json({
                             token,
                             user: {
@@ -49,7 +43,6 @@ const signup = (req, res) => {
                   })
               })
          })
-    })
 };
 
 const login = (req, res) => {
@@ -69,11 +62,11 @@ const login = (req, res) => {
 
 
           })
-          
+        
   })
 }
 
-const userJWT = (user) => { 
+const createJWT = (user) => { 
   return jwt.sign(
     { user }, 
     SECRET,
