@@ -47,6 +47,7 @@ const signup = (req, res) => {
 
 const login = (req, res) => {
   const { email, password } = req.body
+  // Simple validation
   if( !email || !password) {
     return res.status(400).json( { msg: 'Please enter all fields'} );
   }
@@ -55,14 +56,21 @@ const login = (req, res) => {
   User.findOne( {email} )
         .then(user => {
           if(!user) return res.status(400).json({ msg: 'Sorry, that user does not exist'});
-
+        
+          // Validate password
           bcrypt.compare(password, user.password)
           .then(isMatch => {
             if(!isMatch) return res.status(400).json({ msg: 'That password does not match'})
-
-
-          })
-        
+            const token = createJWT(user)
+            res.json({
+              token,
+              user: {
+                id: user.id,
+                name: user.name,
+                email: user.email
+              }
+         })
+     })    
   })
 }
 
