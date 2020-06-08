@@ -2,12 +2,12 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom"
 import './App.css';
 
-import Home from "./components/home/home";
-import Navbar from "./components/navbar/navbar";
-import Notebook from "./components/notebook/notebook";
-import About from "./components/about/about";
-import Login from "./components/login/login";
-import Signup from "./components/signup/signup";
+import Home from "./components/Home/Home";
+import Navbar from "./components/Navbar/Navbar";
+import Notebook from "./components/Notebook/Notebook";
+import About from "./components/About/About";
+import Login from "./components/Login/Login";
+import Signup from "./components/Signup/Signup";
 
 
 
