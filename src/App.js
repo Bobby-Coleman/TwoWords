@@ -14,15 +14,34 @@ import Backdrop from './components/Backdrop/Backdrop';
 
 
 class App extends Component {
- render() {
+
+  state = {
+    sideDrawerOpen: false
+  };
+
+  drawerToggleClickHandler = () => {
+    this.setState((prevState) => {
+      return {sideDrawerOpen: !prevState.sideDrawerOpen};
+    });
+  };
+
+  render() {
+    let sideDrawer;
+    let backdrop;
+
+    if (this.state.sideDrawerOpen) {
+      sideDrawer = <SideDrawer />
+      backdrop = <Backdrop />
+    }
+
    return (
      <Router>
        <div className="App">
          <div className="App-navbar">
-           <Navbar />
+           <Navbar drawerClickHandler={this.drawerToggleClickHandler} />
          </div>
-         <SideDrawer />
-         <Backdrop />
+         {sideDrawer}
+         {backdrop}
          <main className="App-main">
            <Route path="/" exact component={Home} />
            <Route path="/notebook" exact component={Notebook} />
