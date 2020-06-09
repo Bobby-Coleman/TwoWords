@@ -8,6 +8,7 @@ import Notebook from "./components/Notebook/Notebook";
 import About from "./components/About/About";
 import Login from "./components/Login/Login";
 import Signup from "./components/Signup/Signup";
+import SideDrawer from './components/SideDrawer/SideDrawer'
 
 
 
@@ -18,6 +19,7 @@ const App = () => {
         <div className="App-navbar">
           <Navbar />
         </div>
+        <SideDrawer />
         <main className="App-main">
           <Route path="/" exact component={Home} />
           <Route path="/notebook" exact component={Notebook} />
