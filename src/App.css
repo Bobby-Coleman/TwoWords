@@ -49,3 +49,6 @@ footer {
   justify-content: space-between;
 } 
 
+.App-main {
+  margin-top: 64px;
+}

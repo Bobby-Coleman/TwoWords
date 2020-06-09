@@ -18,11 +18,13 @@ const App = () => {
         <div className="App-navbar">
           <Navbar />
         </div>
-        <Route path="/" exact component={Home} />
-        <Route path="/notebook" exact component={Notebook} />
-        <Route path="/about" exact component={About} />
-        <Route path="/login" exact component={Login} />
-        <Route path="/signup" exact component={Signup} />
+        <main className="App-main">
+          <Route path="/" exact component={Home} />
+          <Route path="/notebook" exact component={Notebook} />
+          <Route path="/about" exact component={About} />
+          <Route path="/login" exact component={Login} />
+          <Route path="/signup" exact component={Signup} />
+        </main>
       </div>
       <footer>
           Copyright Ⓒ Bobby Coleman, 2020 
