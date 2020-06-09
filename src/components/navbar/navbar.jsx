@@ -1,11 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
+import ToggleButton from '../SideDrawer/ToggleButton';
 
 const Navbar = () => {
     return (
       <header className="navbar">
         <nav className="navbar-container">
+          <div>
+            <ToggleButton />
+          </div>
           <ul>
             <Link to="/" className="nav-logo">TWO WORDS</Link>
             <Link to="/notebook" className="nav-link">NOTEBOOK</Link>
