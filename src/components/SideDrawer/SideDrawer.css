@@ -5,5 +5,23 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 400px;
+    width: 70vw;
+    max-width: 400px;
+    z-index: 200;
+}
+
+.side-drawer ul {
+    height: 100vh;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.drawer-link,
+.drawer-logo {
+    color: black;
+    text-decoration: none;
+    font-size: 1.3rem;
+    margin: 0.5rem 0;
 }
