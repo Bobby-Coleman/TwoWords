@@ -3,8 +3,15 @@ import { Link } from 'react-router-dom';
 
 import './SideDrawer.css';
 
-const sideDrawer = props => (
-    <nav className="side-drawer">
+const sideDrawer = (props) => {
+
+    let drawerClassNames = 'side-drawer';
+    if (props.show) {
+        drawerClassNames = 'side-drawer open'
+    }
+
+    return (
+    <nav className={drawerClassNames}>
         <ul>
             <Link to="/" className="drawer-logo">TWO WORDS</Link>
             <Link to="/notebook" className="drawer-link">NOTEBOOK</Link>
@@ -13,6 +20,7 @@ const sideDrawer = props => (
             <Link to="/signup" className="drawer-link">SIGN UP</Link>
         </ul>
     </nav>
-);
+    );
+};
 
 export default sideDrawer;
