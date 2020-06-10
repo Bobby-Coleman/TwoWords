@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken')
 const SECRET = process.env.SECRET
 
 const auth = (req, res, next) => {
-    let token = req.get('Authorization') || req.query.token || req.body.token
+    let token = req.header('x-auth-token');
 
     // Check for token
     if(!token) res.status(401).json({ msg: 'No token, authorization denied'})
