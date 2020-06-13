@@ -17,6 +17,7 @@ class App extends Component {
 
   state = {
     sideDrawerOpen: false,
+    user: userService.getUser(),
   };
 
   drawerToggleClickHandler = () => {
