@@ -81,17 +81,8 @@ const createJWT = (user) => {
     { expiresIn: "24h" }
     );
 }
-  
-const user = (req, res) => {
-    console.log(req.user.id)
-    User.findById(req.user.id)
-    .select('-password')
-    .then( user => res.json(user))
-};
-
 
 module.exports = { 
     signup,
     login,
-    user,
 };
