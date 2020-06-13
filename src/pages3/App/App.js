@@ -42,7 +42,10 @@ class App extends Component {
      <Router>
        <div className="App">
          <div className="App-navbar">
-           <Navbar drawerClickHandler={this.drawerToggleClickHandler} />
+           <Navbar 
+           drawerClickHandler={this.drawerToggleClickHandler}
+           user={this.state.user}
+           />
          </div>
          <SideDrawer show={this.state.sideDrawerOpen} />
          {sideDrawer}
