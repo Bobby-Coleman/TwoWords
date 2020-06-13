@@ -30,6 +30,11 @@ class App extends Component {
     this.setState({sideDrawerOpen: false})
   };
 
+  handleLogout = () => {
+    userService.logout();
+    this.setState({ user: null });
+  }
+
   render() {
     let sideDrawer;
     let backdrop;
@@ -45,6 +50,7 @@ class App extends Component {
            <Navbar 
            drawerClickHandler={this.drawerToggleClickHandler}
            user={this.state.user}
+           handleLogout={this.handleLogout}
            />
          </div>
          <SideDrawer show={this.state.sideDrawerOpen} />

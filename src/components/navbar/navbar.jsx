@@ -11,7 +11,11 @@ const Navbar = (props) => {
             <Link to="/" className="nav-logo">TWO WORDS</Link>
             <Link to="/notebook" className="nav-link">NOTEBOOK</Link>
             <Link to="/about" className="nav-link">STORY</Link>
-            <span className="greeting">"Hi there," {props.user.name}</span>
+            <Link to="" className="nav-link" onClick={props.handleLogout}>LOG OUT</Link>
+            <span className="nav-greeting">{props.user.name}</span>
+            <div className="nav-toggle-button">
+              <ToggleButton click={props.drawerClickHandler}/>
+            </div>
           </ul>
         </nav>
       </header>
@@ -19,6 +23,8 @@ const Navbar = (props) => {
       <header className="header">
         <nav className="navbar-container">
           <ul>
+            <Link to="/" className="nav-logo">TWO WORDS</Link>
+            <Link to="/about" className="nav-link">STORY</Link>
             <Link to="/login" className="nav-link">LOGIN</Link>
             <Link to="/signup" className="nav-link">SIGN UP</Link>
             <div className="nav-toggle-button">

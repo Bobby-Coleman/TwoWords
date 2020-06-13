@@ -26,6 +26,11 @@
     padding: 10px;
 }
 
+.nav-greeting {
+    color: grey;
+    margin-top: 10px;
+}
+
 .nav-link:hover,
 .nav-link:active {
     font-weight: 600;

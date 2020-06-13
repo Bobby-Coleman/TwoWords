@@ -24,8 +24,14 @@ const getUserFromToken = () => {
 }
 
 
+const removeToken = () => {
+    localStorage.removeItem("token");
+}
+
+
 export default {
     setToken,
     getToken,
     getUserFromToken,
+    removeToken,
 } 
