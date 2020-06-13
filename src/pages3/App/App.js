@@ -6,7 +6,7 @@ import Home from "../../components/Home/Home";
 import Navbar from "../../components/Navbar/Navbar";
 import Notebook from "../../components/Notebook/Notebook";
 import About from "../../components/About/About";
-import Login from "../../components/Login/Login";
+import LoginPage from "../LoginPage/LoginPage";
 import SignupPage from "../SignupPage/SignupPage";
 import SideDrawer from '../../components/SideDrawer/SideDrawer';
 import Backdrop from '../../components/Backdrop/Backdrop';
@@ -64,7 +64,7 @@ class App extends Component {
            <Route path="/" exact component={Home} />
            <Route path="/notebook" exact component={Notebook} />
            <Route path="/about" exact component={About} />
-           <Route path="/login" exact component={Login} />
+           <Route path="/login" exact component={LoginPage} />
            <Route exact path='/signup' render={({ history }) =>
               <SignupPage
                 history={history}
