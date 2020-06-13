@@ -33,7 +33,11 @@ class App extends Component {
   handleLogout = () => {
     userService.logout();
     this.setState({ user: null });
-  }
+  };
+
+  handleSignup = () => {
+    this.setState({ user: userService.getUser() });
+  };
 
   render() {
     let sideDrawer;
@@ -61,7 +65,12 @@ class App extends Component {
            <Route path="/notebook" exact component={Notebook} />
            <Route path="/about" exact component={About} />
            <Route path="/login" exact component={Login} />
-           <Route path="/signup" exact component={SignupPage} />
+           <Route exact path='/signup' render={({ history }) =>
+              <SignupPage
+                history={history}
+                handleSignup={this.handleSignup}
+              />
+            }/>
          </main>
        <footer>
            Copyright Ⓒ Bobby Coleman, 2020 
