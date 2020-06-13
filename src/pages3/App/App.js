@@ -10,13 +10,13 @@ import Login from "../../components/Login/Login";
 import SignupPage from "../SignupPage/SignupPage";
 import SideDrawer from '../../components/SideDrawer/SideDrawer';
 import Backdrop from '../../components/Backdrop/Backdrop';
-
+import userService from '../../utils/userService'
 
 
 class App extends Component {
 
   state = {
-    sideDrawerOpen: false
+    sideDrawerOpen: false,
   };
 
   drawerToggleClickHandler = () => {
