@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom"
 import './App.css';
 
-import Home from "./components/Home/Home";
-import Navbar from "./components/Navbar/Navbar";
-import Notebook from "./components/Notebook/Notebook";
-import About from "./components/About/About";
-import Login from "./components/Login/Login";
-import Signup from "./components/Signup/Signup";
-import SideDrawer from './components/SideDrawer/SideDrawer';
-import Backdrop from './components/Backdrop/Backdrop';
+import Home from "../../components/Home/Home";
+import Navbar from "../../components/Navbar/Navbar";
+import Notebook from "../../components/Notebook/Notebook";
+import About from "../../components/About/About";
+import Login from "../../components/Login/Login";
+import SignupPage from "../SignupPage/SignupPage";
+import SideDrawer from '../../components/SideDrawer/SideDrawer';
+import Backdrop from '../../components/Backdrop/Backdrop';
 
 
 
@@ -51,7 +51,7 @@ class App extends Component {
            <Route path="/notebook" exact component={Notebook} />
            <Route path="/about" exact component={About} />
            <Route path="/login" exact component={Login} />
-           <Route path="/signup" exact component={Signup} />
+           <Route path="/signup" exact component={SignupPage} />
          </main>
        <footer>
            Copyright Ⓒ Bobby Coleman, 2020 
