@@ -23,23 +23,26 @@ const userSchema = new Schema(
 );
 
 userSchema.set("toJSON", { 
-  transform: (doc, ret) => {
+  transform: function (doc, ret) {
     delete ret.password;
     return ret;
   }, 
 });
 
-userSchema.pre("save", (next) => {
+
+userSchema.pre("save", function (next) {
   const user = this;
   if (!user.isModified("password")) return next();
-  bcrypt.hash(user.password, SALT_ROUNDS, (err, hash) => {
+  // password has been changed - salt and hash it
+  bcrypt.hash(user.password, SALT_ROUNDS, function (err, hash) {
     if (err) return next(err);
+    // replace the user provided password with the hash
     user.password = hash;
     next();
   });
 });
 
-userSchema.methods.comparePassword = (tryPassword, cb) => {
+userSchema.methods.comparePassword = function (tryPassword, cb) {
   bcrypt.compare(tryPassword, this.password, cb);
 }
 

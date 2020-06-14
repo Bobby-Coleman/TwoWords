@@ -57,7 +57,11 @@ class App extends Component {
            handleLogout={this.handleLogout}
            />
          </div>
-         <SideDrawer show={this.state.sideDrawerOpen} />
+         <SideDrawer 
+         show={this.state.sideDrawerOpen} 
+         user={this.state.user}
+         handleLogout={this.handleLogout}
+         />
          {sideDrawer}
          {backdrop}
          <main className="App-main">

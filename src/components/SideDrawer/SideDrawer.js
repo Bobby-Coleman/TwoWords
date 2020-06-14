@@ -10,17 +10,23 @@ const sideDrawer = (props) => {
         drawerClassNames = 'side-drawer open'
     }
 
-    return (
-    <nav className={drawerClassNames}>
+    let sideDrawer = props.user ? (
         <ul>
             <Link to="/" className="drawer-logo">TWO WORDS</Link>
             <Link to="/notebook" className="drawer-link">NOTEBOOK</Link>
             <Link to="/about" className="drawer-link">STORY</Link>
+            <Link to="" className="drawer-link" onClick={props.handleLogout}>LOG OUT</Link>
+        </ul>
+            ) : (
+        <ul>
+            <Link to="/" className="drawer-logo">TWO WORDS</Link>
+            <Link to="/about" className="drawer-link">STORY</Link>
             <Link to="/login" className="drawer-link">LOGIN</Link>
             <Link to="/signup" className="drawer-link">SIGN UP</Link>
         </ul>
-    </nav>
-    );
+    )
+
+    return <nav className={drawerClassNames}>{sideDrawer}</nav>;
 };
 
 export default sideDrawer;
