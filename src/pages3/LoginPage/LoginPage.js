@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-
+import userService from '../../utils/userService'
 
 class LoginPage extends Component {
 
@@ -17,6 +17,13 @@ class LoginPage extends Component {
 
     handleSubmit = async(e) => {
         e.preventDefault()
+        try {
+            await userService.login(this.state)
+            this.props.handleSignupOrLogin();
+            this.props.history.push('/');
+        } catch (err) {
+            alert('Invalid Credentials!');
+        }
     }
 
     render() {
