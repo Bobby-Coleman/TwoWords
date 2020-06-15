@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom"
 import './App.css';
 
-import Home from "../../components/Home/Home";
+import HomePage from "../HomePage/HomePage";
 import Navbar from "../../components/Navbar/Navbar";
 import Notebook from "../../components/Notebook/Notebook";
 import About from "../../components/About/About";
@@ -65,7 +65,7 @@ class App extends Component {
          {sideDrawer}
          {backdrop}
          <main className="App-main">
-           <Route path="/" exact component={Home} />
+           <Route path="/" exact component={HomePage} />
            <Route path="/notebook" exact component={Notebook} />
            <Route path="/about" exact component={About} />
            <div className="register">
