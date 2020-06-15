@@ -30,14 +30,15 @@ class LoginPage extends Component {
 
     render() {
         return (
+          <div className="box-shadow"> 
             <div className="form-container">
-                <div className="form-header">Log In</div>
+                <div className="form-header">LOGIN</div>
                 <div className="robot-img">
                     <img src={RobotImg} alt="Robot"/>
                 </div>
                 <form onSubmit={this.handleSubmit}>
                     <div className='form-login'>
-                        <div>
+                        <div className='form-group'>
                             <label htmlFor="Email">Email</label>
                             <input 
                                 className='form-line' 
@@ -48,7 +49,7 @@ class LoginPage extends Component {
                                 onChange={this.handleChange}
                             />
                         </div>
-                        <div>
+                        <div className='form-group'>
                             <label htmlFor="password">Password</label>
                             <input 
                                 className='form-line' 
@@ -60,12 +61,13 @@ class LoginPage extends Component {
                             />
                         </div>
                         <div className='form-links'>
-                            <Link to='/'>Cancel</Link>
-                            <button>Log In</button>
+                            <Link className="btn-cancel" to='/'>Cancel</Link>
+                            <button className="btn">Log In</button>
                         </div>
                     </div>
                 </form>
             </div>
+          </div>
         )
     }
 }

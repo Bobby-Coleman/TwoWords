@@ -1,13 +1,30 @@
+.register {
+    display: flex;
+    justify-content: center;
+}
+
 .form-container {
     background-color: f1f1f1;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+}
+
+.box-shadow {
+    box-shadow: 0px 0px 12px 2px rgba(15, 15, 15, 0.281);
+    padding: 20px;
+    width: 20em;
+    height: 30em;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 .form-header {
     font-size: 24px;
+    font-weight: 700;
     font-family: "Open Sans", sans-serif;
 }
 
@@ -34,6 +51,7 @@ img {
 
 label {
     font-size: 20px;
+    font-weight: 600;
 }
 
 input {
@@ -53,4 +71,11 @@ input {
 input:focus {
     outline: none;
     box-shadow: 0px 0px 12px 0.8px #3474dbb2;
+}
+
+.form-links {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }

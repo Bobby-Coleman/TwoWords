@@ -68,6 +68,7 @@ class App extends Component {
            <Route path="/" exact component={Home} />
            <Route path="/notebook" exact component={Notebook} />
            <Route path="/about" exact component={About} />
+           <div className="register">
            <Route exact path='/login' render={({ history }) =>
               <LoginPage
                 history={history}
@@ -80,6 +81,7 @@ class App extends Component {
                 handleSignupOrLogin={this.handleSignupOrLogin}
               />
             }/>
+           </div>
          </main>
        <footer>
            Copyright Ⓒ Bobby Coleman, 2020 
