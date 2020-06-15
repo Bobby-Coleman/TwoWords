@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import userService from '../../utils/userService'
+import './LoginPage.css'
+import RobotImg from '../../images/RobotImg.svg'
 
 class LoginPage extends Component {
 
@@ -28,11 +30,15 @@ class LoginPage extends Component {
 
     render() {
         return (
-            <div>
-                <header>Log In</header>
+            <div className="form-container">
+                <div className="form-header">Log In</div>
+                <div className="robot-img">
+                    <img src={RobotImg} alt="Robot"/>
+                </div>
                 <form onSubmit={this.handleSubmit}>
-                    <div className='form login'>
+                    <div className='form-login'>
                         <div>
+                            <label htmlFor="Email">Email</label>
                             <input 
                                 className='form-line' 
                                 type='email' 
@@ -43,6 +49,7 @@ class LoginPage extends Component {
                             />
                         </div>
                         <div>
+                            <label htmlFor="password">Password</label>
                             <input 
                                 className='form-line' 
                                 type='password' 
