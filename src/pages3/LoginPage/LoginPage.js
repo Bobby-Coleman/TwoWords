@@ -32,7 +32,10 @@ class LoginPage extends Component {
         return (
           <div className="box-shadow"> 
             <div className="form-container">
-                <div className="form-header">LOGIN</div>
+                <div classname="header-group">
+                    <Link className="signup-btn" to='/login'>LOGIN</Link>
+                    <Link className="signup-btn" to='/signup'>SIGNUP</Link>
+                </div>
                 <div className="robot-img">
                     <img src={RobotImg} alt="Robot"/>
                 </div>

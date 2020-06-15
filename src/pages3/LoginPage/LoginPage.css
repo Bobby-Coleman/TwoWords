@@ -28,6 +28,13 @@
     font-family: "Open Sans", sans-serif;
 }
 
+.header-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+
 .form-login {
     display: flex;
     flex-direction: column;
@@ -78,4 +85,10 @@ input:focus {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+
+.signup-btn {
+    margin: 20px;
+    text-decoration: none;
+    color:  #2386c8;
 }

@@ -24,15 +24,19 @@ footer {
   font-size: 21px;
   padding: 5px 20px;
   border: 0;
-  background-color: #3498db;
   color: #fff;
   border-radius: 3px;
   transition: all 250ms ease-in-out;
   cursor: pointer;
+  text-decoration: none;
 }  
 
 .btn:hover {
   background-color: #2386c8;
+}
+
+.btn {
+  background-color: #3498db;
 }
 
 .btn, .btn-cancel:focus {
@@ -41,10 +45,12 @@ footer {
 
 .btn-cancel {
   background-color: #c1c9d8;
-  text-decoration: none;
 }
 
 .btn-cancel:hover {
   background-color: #b4bac5;
 }
+
+
+
 
