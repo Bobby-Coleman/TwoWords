@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import userService from '../../utils/userService'
-import './LoginPage.css'
+import './RegistrationPages.css'
 import RobotImg from '../../images/RobotImg.svg'
 
 class LoginPage extends Component {
@@ -65,7 +65,7 @@ class LoginPage extends Component {
                         </div>
                         <div className='form-links'>
                             <Link className="btn-cancel" to='/'>Cancel</Link>
-                            <button className="btn">Log In</button>
+                            <button className="btn">Login</button>
                         </div>
                     </div>
                 </form>
