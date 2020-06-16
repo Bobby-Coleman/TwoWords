@@ -38,6 +38,10 @@
     font-family: "Open Sans", sans-serif;
 }
 
+.signup-btn:active {
+    text-decoration: underline;
+}
+
 /* .header-group {
     display: flex;
     flex-direction: row;

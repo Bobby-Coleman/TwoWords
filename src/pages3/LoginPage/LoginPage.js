@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 import userService from '../../utils/userService'
 import './RegistrationPages.css'
 import RobotImg from '../../images/RobotImg.svg'
@@ -33,8 +33,17 @@ class LoginPage extends Component {
           <div className="box-shadow"> 
             <div className="form-container">
                 <div classname="header-group">
-                    <Link className="signup-btn" to='/login'>LOGIN</Link>
-                    <Link className="signup-btn" to='/signup'>SIGNUP</Link>
+                    <NavLink 
+                    className="signup-btn" 
+                    activeClassName="active-link" 
+                    to='/login'>
+                        LOGIN
+                    </NavLink>
+                    <Link 
+                    className="signup-btn"
+                     to='/signup'>
+                        SIGNUP
+                    </Link>
                 </div>
                 <div className="robot-img">
                     <img src={RobotImg} alt="Robot"/>

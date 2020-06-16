@@ -26,13 +26,17 @@
     padding: 10px;
 }
 
+.active-nav-link {
+    /* font-weight: 600; */
+    border-bottom: 1.5px #c7c6c6 solid;
+}
+
 .nav-greeting {
     color: grey;
     margin-top: 10px;
 }
 
-.nav-link:hover,
-.nav-link:active {
+.nav-link:hover {
     font-weight: 600;
 }
 

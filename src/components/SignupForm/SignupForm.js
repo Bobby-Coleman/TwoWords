@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 import userService from '../../utils/userService'
 import RobotImg from '../../images/RobotImg.svg'
 
@@ -40,7 +40,12 @@ class SignupForm extends Component {
               <div className="form-container">
                  <div classname="header-group">
                     <Link className="signup-btn" to='/login'>LOGIN</Link>
-                    <Link className="signup-btn" to='/signup'>SIGNUP</Link>
+                    <NavLink 
+                    className="signup-btn" 
+                    activeClassName="active-link"
+                     to='/signup'>
+                        SIGNUP
+                    </NavLink>
                 </div>
                 <div className="robot-img">
                     <img src={RobotImg} alt="Robot"/>
