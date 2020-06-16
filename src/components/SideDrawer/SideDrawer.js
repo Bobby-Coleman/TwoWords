@@ -12,17 +12,17 @@ const sideDrawer = (props) => {
 
     let sideDrawer = props.user ? (
         <ul className="drawer-container">
-            <NavLink to="/" className="drawer-link" exact activeClassName="active-link">TWO WORDS</NavLink>
-            <NavLink to="/notebook" className="drawer-link" activeClassName="active-link">NOTEBOOK</NavLink>
-            <NavLink to="/about" className="drawer-link" activeClassName="active-link">STORY</NavLink>
+            <NavLink to="/two-words" className="drawer-link" exact activeClassName="active-link">TWO WORDS</NavLink>
+            <NavLink to="/notebook" className="drawer-link" exact activeClassName="active-link">NOTEBOOK</NavLink>
+            <NavLink to="/" className="drawer-link" exact activeClassName="active-link">STORY</NavLink>
             <NavLink to="" className="drawer-link" onClick={props.handleLogout}>LOG OUT</NavLink>
         </ul>
             ) : (
         <ul className="drawer-container">
-            <NavLink to="/" className="drawer-link" exact activeClassName="active-link">TWO WORDS</NavLink>
-            <NavLink to="/about" className="drawer-link" activeClassName="active-link">STORY</NavLink>
-            <NavLink to="/login" className="drawer-link" activeClassName="active-link">LOGIN</NavLink>
-            <NavLink to="/signup" className="drawer-link" activeClassName="active-link" >SIGN UP</NavLink>
+            <NavLink to="/two-words" className="drawer-link" exact activeClassName="active-link">TWO WORDS</NavLink>
+            <NavLink to="/" className="drawer-link" exact activeClassName="active-link">STORY</NavLink>
+            <NavLink to="/login" className="drawer-link" exact activeClassName="active-link">LOGIN</NavLink>
+            <NavLink to="/signup" className="drawer-link" exact activeClassName="active-link" >SIGN UP</NavLink>
         </ul>
     )
 

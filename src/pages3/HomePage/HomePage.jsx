@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Typical from 'react-typical'
+import { Link } from 'react-router-dom'
 import './HomePage.css'
 
 export default class Home extends Component {
@@ -39,6 +40,7 @@ export default class Home extends Component {
             ]}
             />
           </p>
+          <Link className="btn" to='/two-words'>GO</Link>
       </div>
   }
 }
