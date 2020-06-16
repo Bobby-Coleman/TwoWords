@@ -1,0 +1,12 @@
+.two-words-container {
+    background-color: teal;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.word {
+    font-size: 60px;
+    font-weight: 800;
+    color: white;
+}

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './TwoWordsPage.css'
 const API_KEY = process.env.API_KEY
 
 export default class TwoWords extends Component {
@@ -19,21 +20,30 @@ export default class TwoWords extends Component {
     const secWordRes = await fetch(secondWordUrl);
     const firstData = await firstWordRes.json();
     const secondData = await secWordRes.json();
-    this.setState({wordOne: firstData.word, loadingFirstWord: false})
-    this.setState({wordTwo: secondData.word, loadingSecWord: false})
-  }
+    const firstWord = firstData.word.toUpperCase();
+    const secondWord = secondData.word.toUpperCase();
+    this.setState({wordOne: firstWord, loadingFirstWord: false})
+    this.setState({wordTwo: secondWord, loadingSecWord: false})
+}
 
   render() {
+
+    if (this.state.loadingFirstWord || this.state.loadingSecWord) {
+      return <div>Loading Two Words</div>
+    }
+
+    if (!this.state.wordOne) {
+      return <div>Couldn't retreive first word :(</div>
+    }
+
+    if (!this.state.wordTwo) {
+      return <div>Couldn't retreive second word :(</div>
+    }
+
     return (
     <div className="two-words-container">
-       {this.state.loadingFirstWord || this.state.loadingSecWord || !this.state.wordOne || !this.state.wordTwo ? (
-         <div>Loading Two Words</div>
-       ) : (
-        <div>
-          <div>{this.state.wordOne}</div>
-          <div>{this.state.wordTwo}</div>
-        </div>
-       )}
+        <div className="word">{this.state.wordOne}</div>
+        <div className="word">{this.state.wordTwo}</div>
     </div>
     );
   }
