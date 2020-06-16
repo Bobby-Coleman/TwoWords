@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import './SideDrawer.css';
 
@@ -12,17 +12,17 @@ const sideDrawer = (props) => {
 
     let sideDrawer = props.user ? (
         <ul>
-            <Link to="/" className="drawer-logo">TWO WORDS</Link>
-            <Link to="/notebook" className="drawer-link">NOTEBOOK</Link>
-            <Link to="/about" className="drawer-link">STORY</Link>
-            <Link to="" className="drawer-link" onClick={props.handleLogout}>LOG OUT</Link>
+            <NavLink to="/" className="drawer-link" exact activeClassName="active-link">TWO WORDS</NavLink>
+            <NavLink to="/notebook" className="drawer-link" activeClassName="active-link">NOTEBOOK</NavLink>
+            <NavLink to="/about" className="drawer-link" activeClassName="active-link">STORY</NavLink>
+            <NavLink to="" className="drawer-link" onClick={props.handleLogout}>LOG OUT</NavLink>
         </ul>
             ) : (
         <ul>
-            <Link to="/" className="drawer-logo">TWO WORDS</Link>
-            <Link to="/about" className="drawer-link">STORY</Link>
-            <Link to="/login" className="drawer-link">LOGIN</Link>
-            <Link to="/signup" className="drawer-link">SIGN UP</Link>
+            <NavLink to="/" className="drawer-link" exact activeClassName="active-link">TWO WORDS</NavLink>
+            <NavLink to="/about" className="drawer-link" activeClassName="active-link">STORY</NavLink>
+            <NavLink to="/login" className="drawer-link" activeClassName="active-link">LOGIN</NavLink>
+            <NavLink to="/signup" className="drawer-link" activeClassName="active-link" >SIGN UP</NavLink>
         </ul>
     )
 
