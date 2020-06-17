@@ -18,6 +18,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 //mount API routes here
 app.use('/api/users', require('./routes/api/users'))
 app.use(require('./middleware/auth'));
+app.use('/api/entries', require('./routes/api/entries'))
 
 app.get('/*', (req, res) => {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
