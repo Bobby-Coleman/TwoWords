@@ -11,6 +11,7 @@ import SignupPage from "../SignupPage/SignupPage";
 import SideDrawer from '../../components/SideDrawer/SideDrawer';
 import Backdrop from '../../components/Backdrop/Backdrop';
 import userService from '../../utils/userService'
+import entriesService from '../../utils/entriesService'
 
 
 class App extends Component {
@@ -38,6 +39,15 @@ class App extends Component {
   handleSignupOrLogin = () => {
     this.setState({ user: userService.getUser() });
   };
+
+  // CRUD services
+
+  handleAddEntry = async newEntryData => {
+    const newEntry = await entriesService.create(newEntryData)
+    this.setState(state => ({
+      entries: [...state.entries, newEntry]
+    }), () => this.props.history.push('/journal'))
+  }
 
   render() {
     let sideDrawer;

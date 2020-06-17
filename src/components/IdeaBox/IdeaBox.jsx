@@ -2,29 +2,39 @@ import React, { Component } from 'react';
 
 export default class IdeaBox extends Component {
 
-    state= {
-        entryData: {
-            title: '',
-            entry: '',
-        }
+    state = {
+        wordOne: '',
+        wordTwo: '',
+        title: '',
+        entry: '',
     }
 
     handleChange = e => {
-        const entryData = {...this.state.entryData, [e.target.name]: e.target.value}
-        this.setState(entryData)
+        this.setState({
+            [e.target.name]: e.target.value
+        })
     }
+
+    handleSubmit = e => {
+      e.preventDefault()
+      this.setState({
+        wordOne: this.props.wordOne,
+        wordTwo: this.props.wordTwo
+      })
+      this.props.handleAddEntry(this.state)
+  }
 
   render() {
     return (
       <div className="idea-box">
-        <form>
+        <form onSubmit={this.handleSubmit}>
             <div className="entry-group">
                 <label>Title</label>
                 <input 
                 className='entry-line'
                 name='title'
                 type='text'
-                value={this.state.entryData.title}
+                value={this.state.title}
                 onChange={this.handleChange}
                 required
                 >
@@ -36,7 +46,7 @@ export default class IdeaBox extends Component {
                 className='entry-line'
                 name='entry'
                 type='text'
-                value={this.state.entryData.entry}
+                value={this.state.entry}
                 onChange={this.handleChange}
                 required
                 rows="10" cols="40"
