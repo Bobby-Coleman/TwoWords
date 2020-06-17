@@ -34,7 +34,8 @@ export default class TwoWords extends Component {
         </div>
         <IdeaBox 
         wordOne={this.state.wordOne} 
-        wordTwo={this.state.wordTwo} />
+        wordTwo={this.state.wordTwo} 
+        handleAddEntry={this.props.handleAddEntry} />
       </>
     );
   }

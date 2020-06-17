@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom"
+import { BrowserRouter as Router, Route, Redirect } from "react-router-dom"
 import './App.css';
 
 import HomePage from "../HomePage/HomePage";
@@ -19,6 +19,7 @@ class App extends Component {
   state = {
     sideDrawerOpen: false,
     user: userService.getUser(),
+    entries: [],
   };
 
   drawerToggleClickHandler = () => {
@@ -46,7 +47,7 @@ class App extends Component {
     const newEntry = await entriesService.create(newEntryData)
     this.setState(state => ({
       entries: [...state.entries, newEntry]
-    }), () => this.props.history.push('/journal'))
+    }))
   }
 
   render() {
@@ -77,7 +78,14 @@ class App extends Component {
          <main className="App-main">
            <Route path="/" exact component={HomePage} />
            <Route path="/notebook" exact component={Notebook} />
-           <Route path="/two-words" exact component={TwoWordsPage} />
+           <Route exact path='/two-words' render={() =>
+              userService.getUser() ?
+                <TwoWordsPage 
+                  handleAddEntry={this.handleAddEntry}
+                />
+              :
+              <Redirect to='/login'/>
+            }/>
            <div className="register">
            <Route exact path='/login' render={({ history }) =>
               <LoginPage
