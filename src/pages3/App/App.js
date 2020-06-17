@@ -79,12 +79,10 @@ class App extends Component {
            <Route path="/" exact component={HomePage} />
            <Route path="/notebook" exact component={Notebook} />
            <Route exact path='/two-words' render={() =>
-              userService.getUser() ?
-                <TwoWordsPage 
-                  handleAddEntry={this.handleAddEntry}
-                />
-              :
-              <Redirect to='/login'/>
+              <TwoWordsPage 
+                handleAddEntry={this.handleAddEntry}
+                user={this.state.user}
+              />
             }/>
            <div className="register">
            <Route exact path='/login' render={({ history }) =>

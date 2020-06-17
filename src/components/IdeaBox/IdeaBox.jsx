@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export default class IdeaBox extends Component {
 
@@ -24,7 +25,27 @@ export default class IdeaBox extends Component {
       this.props.handleAddEntry(this.state)
   }
 
+ 
+
   render() {
+
+    let isLoggedIn = this.props.user;
+    let AuthButton;
+
+    if (isLoggedIn) {
+      AuthButton = <button 
+      className="btn"
+      type="submit">
+          Submit
+      </button>
+    } else {
+      AuthButton = 
+      <>
+        <label>Want to save an idea?</label>
+        <Link to="/login" className="btn">LOGIN</Link>
+      </>
+    }
+
     return (
       <div className="idea-box">
         <form onSubmit={this.handleSubmit}>
@@ -53,11 +74,7 @@ export default class IdeaBox extends Component {
                 >
                 </textarea>
             </div>
-            <button 
-            className="btn"
-            type="submit">
-                Submit
-            </button>
+            {AuthButton}
         </form>
       </div>
     );
