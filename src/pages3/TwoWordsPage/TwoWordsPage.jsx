@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './TwoWordsPage.css'
+import IdeaBox from '../../components/IdeaBox/IdeaBox'
 const randomWords = require('random-words');
+
 
 export default class TwoWords extends Component {
 
@@ -24,11 +26,14 @@ export default class TwoWords extends Component {
   render() {
 
     return (
-    <div className="two-words-container">
-        <div className="word">{this.state.wordOne}</div>
-        <div className="word">{this.state.wordTwo}</div>
-        <button onClick={this.getWords} className="next-btn btn">></button>
-    </div>
+      <>
+        <div className="two-words-container">
+            <div className="word">{this.state.wordOne}</div>
+            <div className="word">{this.state.wordTwo}</div>
+            <button onClick={this.getWords} className="next-btn btn">></button>
+        </div>
+        <IdeaBox />
+      </>
     );
   }
 }
