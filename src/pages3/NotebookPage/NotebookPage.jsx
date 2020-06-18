@@ -7,7 +7,9 @@ const Notebook = (props) => {
         return (
             <div>
                 {props.entries.map(entry =>
-                 <Entry />
+                 <Entry 
+                 entry={entry}
+                 />
                 )}
             </div>
         )

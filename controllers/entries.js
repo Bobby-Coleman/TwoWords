@@ -4,7 +4,6 @@ const create = async (req, res) => {
     req.body.user = req.user._id
     try {
         await Entry.create(req.body)
-        console.log('Entry Added')
         index(req, res)
     } catch (err) {
         res.json({err})
