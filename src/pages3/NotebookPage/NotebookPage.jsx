@@ -1,12 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react'
+import Entry from '../../components/Entry/Entry';
 
-export default class Notebook extends Component {
-
-  render() {
-    return (
-      <div className="notebook">
-        <h1>Notebook</h1>
-      </div>
-    );
-  }
+const Notebook = (props) => {
+    
+    if(props.entries.length) {
+        return (
+            <div>
+                {props.entries.map(entry =>
+                 <Entry />
+                )}
+            </div>
+        )
+    } else {
+        return (
+            <p>Your Notebook is Empty</p>
+        )
+    }
 }
+
+export default Notebook;
