@@ -8,7 +8,7 @@ export default class IdeaBox extends Component {
         wordTwo: '',
         title: '',
         entry: '',
-        didSubmit: false,
+        // didSubmit: null,
     }
 
     handleChange = e => {
@@ -25,46 +25,17 @@ export default class IdeaBox extends Component {
         didSubmit: true,
       })
       this.props.handleAddEntry(this.state)
+      this.setState({
+        title: '',
+        entry: '',
+      })
   }
 
   render() {
 
     let isLoggedIn = this.props.user;
     let AuthButton;
-
     let didSubmit;
-
-    if (this.state.didSubmit) {
-      didSubmit = <div>Good idea!</div>
-    } else {
-      didSubmit = <form onSubmit={this.handleSubmit}>
-      <div className="entry-group">
-          <label>Title</label>
-          <input 
-          className='entry-line'
-          name='title'
-          type='text'
-          value={this.state.title}
-          onChange={this.handleChange}
-          required
-          >
-          </input>
-      </div>
-      <div className="entry-group">
-          <label>Entry</label>
-          <textarea
-          className='entry-line'
-          name='entry'
-          type='text'
-          value={this.state.entry}
-          onChange={this.handleChange}
-          required
-          rows="10" cols="40"
-          >
-          </textarea>
-      </div>
-  </form>
-    }
 
     if (isLoggedIn) {
       AuthButton = <button 
@@ -80,10 +51,42 @@ export default class IdeaBox extends Component {
       </>
     }
 
+    // if (this.state.didSubmit) {
+    //   AuthButton = <div>Good idea!</div>
+    // }
+
+
     return (
       <div className="idea-box">
-        {didSubmit}
-        {AuthButton}
+        <form onSubmit={this.handleSubmit}>
+            <div className="entry-group">
+                <label>Title</label>
+                <input 
+                className='entry-line'
+                name='title'
+                type='text'
+                value={this.state.title}
+                onChange={this.handleChange}
+                required
+                >
+                </input>
+            </div>
+            <div className="entry-group">
+                <label>Entry</label>
+                <textarea
+                className='entry-line'
+                name='entry'
+                type='text'
+                value={this.state.entry}
+                onChange={this.handleChange}
+                required
+                rows="10" cols="40"
+                >
+                </textarea>
+            </div>
+            {AuthButton}
+            {didSubmit}
+        </form>
       </div>
     );
   }

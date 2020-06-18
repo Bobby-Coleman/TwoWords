@@ -15,8 +15,10 @@ export default class TwoWords extends Component {
     const words = randomWords({exactly: 2, maxLength: 7, formatter: (word)=> word.toUpperCase()})
     const wordOne = words[0]
     const wordTwo = words[1]
-    this.setState({wordOne: wordOne})
-    this.setState({wordTwo: wordTwo})
+    this.setState({
+      wordOne,
+      wordTwo,
+    })
   }
   
   componentDidMount() {
@@ -36,7 +38,7 @@ export default class TwoWords extends Component {
         wordOne={this.state.wordOne} 
         wordTwo={this.state.wordTwo} 
         handleAddEntry={this.props.handleAddEntry}
-        user={this.props.user} />
+        user={this.props.user}/>
       </>
     );
   }
