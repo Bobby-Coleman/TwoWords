@@ -45,9 +45,10 @@ class App extends Component {
 
   handleAddEntry = async newEntryData => {
     const newEntry = await entriesService.create(newEntryData)
+    console.log('entry created!')
     this.setState(state => ({
       entries: [...state.entries, newEntry]
-    }), () => this.props.history.push('/notebook'))
+    }))
   }
 
   async componentDidMount() {
@@ -82,8 +83,8 @@ class App extends Component {
          {backdrop}
          <main className="App-main">
            <Route path="/" exact component={HomePage} />
-           <Route exact path='/notebook' render={({ history }) =>
-              <NotebookPage 
+           <Route exact path='/notebook' render={() =>
+              <NotebookPage
                 user={this.state.user}
                 entries={this.state.entries}
               />
