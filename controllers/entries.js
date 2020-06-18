@@ -5,11 +5,20 @@ const create = async (req, res) => {
     try {
         await Entry.create(req.body)
         console.log('Entry Added')
+        index(req, res)
     } catch (err) {
         res.json({err})
     }
 }
 
+
+const index = async (req, res) => {
+    req.body.user = req.user._id
+    const entries = await Entry.find({user: req.user._id})
+    res.status(200).json(entries);
+}
+
 module.exports = {
     create,
+    index,
 }

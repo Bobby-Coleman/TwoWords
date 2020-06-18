@@ -7,6 +7,9 @@ const checkAuth = (req, res, next) => {
     return res.status(401).json({ msg: 'Not Authorized' })
 }
 
+
+router.get('/', entriesCtrl.index);
+
 // protected routes //
 
 router.use(require('../../middleware/auth'))

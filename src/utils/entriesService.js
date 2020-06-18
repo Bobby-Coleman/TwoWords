@@ -15,7 +15,18 @@ const create = (entry) => {
 }
 
 
+const index = () => {
+    const options = {
+        method: 'GET',
+        headers: {
+            'Authorization': 'Bearer ' + tokenService.getToken()
+        }
+    }
+    return fetch(BASE_URL, options).then(res => res.json())
+}
+
 export default {
     create,
+    index,
 }
   

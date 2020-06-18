@@ -4,7 +4,7 @@ import './App.css';
 
 import HomePage from "../HomePage/HomePage";
 import Navbar from "../../components/Navbar/Navbar";
-import Notebook from "../../components/Notebook/Notebook";
+import NotebookPage from "../NotebookPage/NotebookPage";
 import TwoWordsPage from "../TwoWordsPage/TwoWordsPage";
 import LoginPage from "../LoginPage/LoginPage";
 import SignupPage from "../SignupPage/SignupPage";
@@ -50,6 +50,11 @@ class App extends Component {
     }))
   }
 
+  async componentDidMount() {
+    const entries = await entriesService.index()
+    this.setState({ entries })
+  }
+
   render() {
     let sideDrawer;
     let backdrop;
@@ -77,7 +82,12 @@ class App extends Component {
          {backdrop}
          <main className="App-main">
            <Route path="/" exact component={HomePage} />
-           <Route path="/notebook" exact component={Notebook} />
+           <Route exact path='/notebook' render={() =>
+              <NotebookPage 
+                user={this.state.user}
+                entries={this.state.entries}
+              />
+            }/>
            <Route exact path='/two-words' render={() =>
               <TwoWordsPage 
                 handleAddEntry={this.handleAddEntry}
