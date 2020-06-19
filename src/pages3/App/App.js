@@ -83,8 +83,10 @@ class App extends Component {
          {backdrop}
          <main className="App-main">
            <Route path="/" exact component={HomePage} />
-           <Route exact path='/notebook' render={() =>
+           <Route exact path='/notebook' render={({history, location}) =>
               <NotebookPage
+                location={location}
+                history={history}
                 user={this.state.user}
                 entries={this.state.entries}
               />

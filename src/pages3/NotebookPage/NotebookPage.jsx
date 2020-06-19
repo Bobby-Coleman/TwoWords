@@ -2,6 +2,7 @@ import React from 'react'
 import Entry from '../../components/Entry/Entry';
 
 const Notebook = (props) => {
+
     
     if(props.entries.length) {
         return (

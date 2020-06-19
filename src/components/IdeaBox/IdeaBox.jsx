@@ -8,22 +8,20 @@ export default class IdeaBox extends Component {
         wordTwo: '',
         title: '',
         entry: '',
-        // didSubmit: null,
     }
 
     handleChange = e => {
         this.setState({
             [e.target.name]: e.target.value
         })
+        this.setState({
+          wordOne: this.props.wordOne,
+          wordTwo: this.props.wordTwo,
+        })
     }
 
     handleSubmit = e => {
       e.preventDefault()
-      this.setState({
-        wordOne: this.props.wordOne,
-        wordTwo: this.props.wordTwo,
-        didSubmit: true,
-      })
       this.props.handleAddEntry(this.state)
       this.setState({
         title: '',
@@ -50,11 +48,6 @@ export default class IdeaBox extends Component {
         <Link to="/login" className="btn">LOGIN</Link>
       </>
     }
-
-    // if (this.state.didSubmit) {
-    //   AuthButton = <div>Good idea!</div>
-    // }
-
 
     return (
       <div className="idea-box">
