@@ -45,9 +45,8 @@ class App extends Component {
 
   handleAddEntry = async newEntryData => {
     const newEntry = await entriesService.create(newEntryData)
-    console.log('entry created!')
-    this.setState(state => ({
-      entries: [...state.entries, newEntry]
+    this.setState(prevState => ({
+      entries: [...prevState.entries, newEntry]
     }))
   }
 

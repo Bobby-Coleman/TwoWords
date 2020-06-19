@@ -21,7 +21,6 @@ export default class IdeaBox extends Component {
     }
 
     handleSubmit = e => {
-      e.preventDefault()
       this.props.handleAddEntry(this.state)
       this.setState({
         title: '',
