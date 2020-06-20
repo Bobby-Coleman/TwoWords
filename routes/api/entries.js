@@ -18,4 +18,6 @@ router.post('/', checkAuth, entriesCtrl.create)
 
 router.delete('/:id', checkAuth, entriesCtrl.deleteOne)
 
+router.put('/:id', checkAuth, entriesCtrl.update)
+
 module.exports = router
