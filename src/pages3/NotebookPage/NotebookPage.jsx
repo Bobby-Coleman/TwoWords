@@ -11,6 +11,7 @@ const Notebook = (props) => {
                  <Entry 
                  entry={entry}
                  handleDeleteEntry={props.handleDeleteEntry}
+                 key={entry._id}
                  />
                 )}
             </div>
