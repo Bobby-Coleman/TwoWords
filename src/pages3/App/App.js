@@ -54,7 +54,7 @@ class App extends Component {
     await entriesService.deleteOne(entryId)
     this.setState(prevState => ({
       entries: prevState.entries.filter(entry => entry._id !==entryId)
-    }), () => this.props.history.push('/notebook'))
+    }))
   }
 
   async componentDidMount() {
@@ -89,11 +89,9 @@ class App extends Component {
          {backdrop}
          <main className="App-main">
            <Route path="/" exact component={HomePage} />
-           <Route exact path='/notebook' render={({history, location}) =>
+           <Route exact path='/notebook' render={() =>
             userService.getUser() ? 
               <NotebookPage
-                location={location}
-                history={history}
                 user={this.state.user}
                 entries={this.state.entries}
                 handleDeleteEntry={this.handleDeleteEntry}

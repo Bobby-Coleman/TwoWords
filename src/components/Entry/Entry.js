@@ -14,6 +14,7 @@ const Entry = (props) => {
                     <label>{props.entry.title}</label>
                     <label>Idea:</label>
                     <p>{props.entry.entry}</p>
+                    <button onClick={() => props.handleDeleteEntry(props.entry._id)}>Delete</button>
                 </div>
             </div>
         </div>

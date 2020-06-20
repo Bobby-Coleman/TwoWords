@@ -10,6 +10,7 @@ const Notebook = (props) => {
                 {props.entries.map(entry =>
                  <Entry 
                  entry={entry}
+                 handleDeleteEntry={props.handleDeleteEntry}
                  />
                 )}
             </div>

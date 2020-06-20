@@ -17,7 +17,18 @@ const index = async (req, res) => {
     res.status(200).json(entries);
 }
 
+const deleteOne = async (req, res) => {
+    try{
+        const deletedEntry = await Entry.findByIdAndRemove(req.params.id)
+        res.status(200).json(deletedEntry)
+    }
+    catch(err){
+        res.status(500).json(err)
+    }
+}
+
 module.exports = {
     create,
     index,
+    deleteOne,
 }
