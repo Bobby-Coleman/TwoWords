@@ -83,12 +83,15 @@ class App extends Component {
          <main className="App-main">
            <Route path="/" exact component={HomePage} />
            <Route exact path='/notebook' render={({history, location}) =>
+            userService.getUser() ? 
               <NotebookPage
                 location={location}
                 history={history}
                 user={this.state.user}
                 entries={this.state.entries}
               />
+              :
+            <Redirect to='/login' />
             }/>
            <Route exact path='/two-words' render={() =>
               <TwoWordsPage 
