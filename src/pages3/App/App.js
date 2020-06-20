@@ -50,6 +50,13 @@ class App extends Component {
     }))
   }
 
+  handleDeleteEntry = async entryId => {
+    await entriesService.deleteOne(entryId)
+    this.setState(prevState => ({
+      entries: prevState.entries.filter(entry => entry._id !==entryId)
+    }), () => this.props.history.push('/notebook'))
+  }
+
   async componentDidMount() {
     const entries = await entriesService.index()
     this.setState({ entries })
@@ -89,6 +96,7 @@ class App extends Component {
                 history={history}
                 user={this.state.user}
                 entries={this.state.entries}
+                handleDeleteEntry={this.handleDeleteEntry}
               />
               :
             <Redirect to='/login' />

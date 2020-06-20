@@ -16,4 +16,6 @@ router.use(require('../../middleware/auth'))
 
 router.post('/', checkAuth, entriesCtrl.create)
 
+router.delete('/:id', checkAuth, entriesCtrl.delete)
+
 module.exports = router

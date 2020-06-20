@@ -25,8 +25,19 @@ const index = () => {
     return fetch(BASE_URL, options).then(res => res.json())
 }
 
+const deleteOne = (entryId) => {
+    const options = {
+        method: 'DELETE',
+        headers: {
+            'Authorization': 'Bearer ' + tokenService.getToken()
+        }
+    }
+    return fetch(`${BASE_URL}/${entryId}`, options).then(res => res.json())
+}
+
 export default {
     create,
     index,
+    deleteOne,
 }
   
