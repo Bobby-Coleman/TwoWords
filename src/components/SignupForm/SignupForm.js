@@ -35,10 +35,11 @@ class SignupForm extends Component {
     }
     
     render() {
+
         return (
             <div className="signup-shadow"> 
               <div className="form-container">
-                 <div classname="header-group">
+                 <div className="header-group">
                     <Link className="signup-btn" to='/login'>LOGIN</Link>
                     <NavLink 
                     className="signup-btn" 
@@ -98,7 +99,7 @@ class SignupForm extends Component {
                         </div>
                         <div className='form-links'>
                             <Link className="btn-cancel" to='/'>Cancel</Link>
-                            <button className="btn">Sign Up</button>
+                            <button className="btn" disabled={this.isFormInvalid()}>Sign Up</button>
                         </div>
                     </div>
                 </form>

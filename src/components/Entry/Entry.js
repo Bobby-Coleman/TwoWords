@@ -40,7 +40,7 @@ class Entry extends Component {
                     <div className="entry-words">
                         <h4 className="entry-word">{this.props.entry.wordOne}</h4>
                         <h4 className="entry-word">{this.props.entry.wordTwo}</h4>
-                    </div>          
+                    </div>   
                     <div>
                         <label>Title:</label>
                         <input

@@ -8,7 +8,7 @@ class LoginPage extends Component {
 
     state = {
         email: '',
-        pw: ''
+        pw: '',
     }
 
     handleChange = (e) => {
@@ -32,7 +32,7 @@ class LoginPage extends Component {
         return (
           <div className="box-shadow"> 
             <div className="form-container">
-                <div classname="header-group">
+                <div className="header-group">
                     <NavLink 
                     className="signup-btn" 
                     activeClassName="active-link" 

@@ -59,7 +59,7 @@ class App extends Component {
   handleUpdateEntry = async (updatedEntryData, entryId) => {
     const updatedEntry = await entriesService.update(updatedEntryData, entryId)
     const newEntriesArray = this.state.entries.map(entry => 
-      entry._id === updatedEntry._id ? updatedEntry : entry)
+      entryId === updatedEntry._id ? updatedEntry : entry)
       this.setState({ entries: newEntriesArray })
   }
 

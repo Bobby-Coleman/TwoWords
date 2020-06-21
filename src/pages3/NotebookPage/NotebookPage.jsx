@@ -19,7 +19,7 @@ const Notebook = (props) => {
         )
     } else {
         return (
-            <p>Your Notebook is Empty</p>
+            <p className="word">Your Notebook is Empty</p>
         )
     }
 }
