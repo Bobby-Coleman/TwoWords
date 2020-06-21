@@ -25,9 +25,7 @@ class Entry extends Component {
     }
 
     handleSubmit = e => {
-        // e.preventDefault()
-        console.log(this.state.entryData)
-        this.props.handleUpdateEntry(this.state.entryData)
+        this.props.handleUpdateEntry(this.state.entryData, this.props.entry._id)
     }
 
     render() {

@@ -35,9 +35,17 @@ const deleteOne = (entryId) => {
     return fetch(`${BASE_URL}/${entryId}`, options).then(res => res.json())
 }
 
+const update = (updatedEntryData, entryId) => {
+    return fetch(`${BASE_URL}/${entryId}`, {
+        method: 'PUT',
+        headers: {'content-type': 'application/json', 'Authorization': 'Bearer ' + tokenService.getToken()},
+        body: JSON.stringify(updatedEntryData)
+    }).then(res => res.json())
+}
+
 export default {
     create,
     index,
     deleteOne,
+    update
 }
-  
