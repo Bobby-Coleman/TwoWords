@@ -54,6 +54,7 @@ export default class IdeaBox extends Component {
                 <label>Title</label>
                 <input 
                 className='entry-line'
+                placeholder="Think of a title"
                 name='title'
                 type='text'
                 value={this.state.title}
@@ -63,9 +64,10 @@ export default class IdeaBox extends Component {
                 </input>
             </div>
             <div className="entry-group">
-                <label>Entry</label>
+                <label>Idea</label>
                 <textarea
                 className='entry-line'
+                placeholder="Write your idea!"
                 name='entry'
                 type='text'
                 value={this.state.entry}
