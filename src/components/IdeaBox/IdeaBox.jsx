@@ -12,7 +12,7 @@ export default class IdeaBox extends Component {
 
     handleChange = e => {
         this.setState({
-            [e.target.name]: e.target.value
+            [e.target.name]: e.target.value,
         })
         this.setState({
           wordOne: this.props.wordOne,
