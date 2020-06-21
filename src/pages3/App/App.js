@@ -92,7 +92,6 @@ class App extends Component {
            <Route exact path='/notebook' render={() =>
             userService.getUser() ? 
               <NotebookPage
-                user={this.state.user}
                 entries={this.state.entries}
                 handleDeleteEntry={this.handleDeleteEntry}
               />

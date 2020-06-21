@@ -14,38 +14,17 @@ export default class IdeaBox extends Component {
         this.setState({
             [e.target.name]: e.target.value
         })
-        this.setState({
-          wordOne: this.props.wordOne,
-          wordTwo: this.props.wordTwo,
-        })
     }
 
     handleSubmit = e => {
-      this.props.handleAddEntry(this.state)
-      this.setState({
-        title: '',
-        entry: '',
-      })
+      e.preventDefault();
+      this.props.handleUpdateEntry(this.state)
   }
 
   render() {
 
-    let isLoggedIn = this.props.user;
-    let AuthButton;
-    
-    if (isLoggedIn) {
-      AuthButton = <button 
-      className="btn"
-      type="submit">
-          Submit
-      </button>
-    } else {
-      AuthButton = 
-      <>
-        <label>Want to save an idea?</label>
-        <Link to="/login" className="btn">LOGIN</Link>
-      </>
-    }
+    let didSubmit;
+
 
     return (
       <div className="idea-box">
@@ -75,7 +54,7 @@ export default class IdeaBox extends Component {
                 >
                 </textarea>
             </div>
-            {AuthButton}
+            {didSubmit}
         </form>
       </div>
     );
