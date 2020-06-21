@@ -23,9 +23,6 @@ export default class IdeaBox extends Component {
 
   render() {
 
-    let didSubmit;
-
-
     return (
       <div className="idea-box">
         <form onSubmit={this.handleSubmit}>
@@ -54,7 +51,6 @@ export default class IdeaBox extends Component {
                 >
                 </textarea>
             </div>
-            {didSubmit}
         </form>
       </div>
     );
