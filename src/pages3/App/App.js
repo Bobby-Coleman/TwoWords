@@ -12,6 +12,7 @@ import SideDrawer from '../../components/SideDrawer/SideDrawer';
 import Backdrop from '../../components/Backdrop/Backdrop';
 import userService from '../../utils/userService'
 import entriesService from '../../utils/entriesService'
+import EditEntryPage from '../EditEntryPage/EditEntryPage'
 
 
 class App extends Component {
@@ -55,6 +56,13 @@ class App extends Component {
     this.setState(prevState => ({
       entries: prevState.entries.filter(entry => entry._id !==entryId)
     }))
+  }
+
+  handleUpdateEntry = async updatedEntryData => {
+    const updatedEntry = await entriesService.update(updatedEntryData)
+    const newEntriesArray = this.state.entries.map(entry => 
+      entry._id === updatedEntry._id ? updatedEntry : entry)
+      this.setState({ entries: newEntriesArray })
   }
 
   async componentDidMount() {
@@ -115,6 +123,11 @@ class App extends Component {
               <SignupPage
                 history={history}
                 handleSignupOrLogin={this.handleSignupOrLogin}
+              />
+            }/>
+              <Route exact path='/edit' render={() =>
+              <EditEntryPage
+              handleUpdateEntry={this.handleUpdateEntry}
               />
             }/>
            </div>
