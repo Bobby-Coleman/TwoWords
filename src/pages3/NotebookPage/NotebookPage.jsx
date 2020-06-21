@@ -12,6 +12,7 @@ const Notebook = (props) => {
                  entry={entry}
                  handleDeleteEntry={props.handleDeleteEntry}
                  key={entry._id}
+                 handleUpdateEntry={props.handleUpdateEntry}
                  />
                 )}
             </div>

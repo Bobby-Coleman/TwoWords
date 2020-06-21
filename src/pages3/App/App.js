@@ -12,8 +12,6 @@ import SideDrawer from '../../components/SideDrawer/SideDrawer';
 import Backdrop from '../../components/Backdrop/Backdrop';
 import userService from '../../utils/userService'
 import entriesService from '../../utils/entriesService'
-import EditEntryPage from '../EditEntryPage/EditEntryPage'
-
 
 class App extends Component {
 
@@ -102,6 +100,7 @@ class App extends Component {
               <NotebookPage
                 entries={this.state.entries}
                 handleDeleteEntry={this.handleDeleteEntry}
+                handleUpdateEntry={this.handleUpdateEntry}
               />
               :
             <Redirect to='/login' />
@@ -123,11 +122,6 @@ class App extends Component {
               <SignupPage
                 history={history}
                 handleSignupOrLogin={this.handleSignupOrLogin}
-              />
-            }/>
-              <Route exact path='/edit' render={() =>
-              <EditEntryPage
-              handleUpdateEntry={this.handleUpdateEntry}
               />
             }/>
            </div>

@@ -5,8 +5,12 @@ class Entry extends Component {
 
     state = {
         isEditing: null,
-        entry: this.props.entry.entry,
-        title: this.props.entry.title,
+        entryData: {    
+            wordOne: this.props.entry.wordOne,
+            wordTwo: this.props.entry.wordTwo,
+            entry: this.props.entry.entry,
+            title: this.props.entry.title,
+        }
     }
 
     handleEditing = (entryId) => {
@@ -14,9 +18,16 @@ class Entry extends Component {
     }
 
     handleChange = e => {
+        const entryData = {...this.state.entryData, [e.target.name]: e.target.value}
         this.setState({
-            [e.target.name]: e.target.value
+            entryData
         })
+    }
+
+    handleSubmit = e => {
+        // e.preventDefault()
+        console.log(this.state.entryData)
+        this.props.handleUpdateEntry(this.state.entryData)
     }
 
     render() {
@@ -25,7 +36,7 @@ class Entry extends Component {
 
         if (this.state.isEditing === this.props.entry._id) {
             entry =    
-        <form>
+        <form onSubmit={this.handleSubmit}>
             <div className="entry-container">
                 <div className="entry">
                     <div className="entry-words">
@@ -39,17 +50,17 @@ class Entry extends Component {
                             placeholder="Think of a title"
                             name='title'
                             type='text'
-                            value={this.state.title}
+                            value={this.state.entryData.title}
                             onChange={this.handleChange}
                             required>
                         </input>
-                            <div className="entry-group">
-                        <label>Idea</label>
+                        <div className="entry-group">
+                            <label>Idea</label>
                             <textarea
                             className='entry-line'
                             name='entry'
                             type='text'
-                            value={this.state.entry}
+                            value={this.state.entryData.entry}
                             onChange={this.handleChange}
                             required
                             rows="10" cols="40"
@@ -57,6 +68,11 @@ class Entry extends Component {
                             </textarea>
                         </div>
                     </div>
+                    <button 
+                    className="btn"
+                    type="submit">
+                        Submit
+                    </button>
                 </div>
             </div>
         </form>   
