@@ -7,7 +7,7 @@ const Notebook = (props) => {
     if(props.entries.length) {
         return (
             <div>
-                {props.entries.map(entry =>
+                {props.entries.slice(0).reverse().map(entry =>
                  <Entry 
                  entry={entry}
                  handleDeleteEntry={props.handleDeleteEntry}

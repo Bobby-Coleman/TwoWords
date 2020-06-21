@@ -1,8 +1,6 @@
 
 # Two Words
 
-## Description
-
 Access the creativity of your right brain and fight writers block with Two Words! 
 This app lends itself to the idea that creativity is generated through forming new connections in the mind. Presented with two unrelated words, your mind will try to make sense of them, resulting in new associations. Whether its the next best invention, song title, or art peice, flip through Two Words and you just might think of ideas a million monkeys on typewriters couldn't have.
 
@@ -12,7 +10,7 @@ This app lends itself to the idea that creativity is generated through forming n
 [Click to view the App:]()
 
 
-## Screenshot(s):
+## Screenshots:
 
 
 ## Technologies Used
