@@ -5,7 +5,7 @@ class Entry extends Component {
 
     state = {
         isEditing: null,
-        entryData: {    
+        entryData: {
             wordOne: this.props.entry.wordOne,
             wordTwo: this.props.entry.wordTwo,
             entry: this.props.entry.entry,
