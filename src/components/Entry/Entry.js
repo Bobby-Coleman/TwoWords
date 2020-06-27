@@ -36,7 +36,7 @@ class Entry extends Component {
             entry =    
         <form onSubmit={this.handleSubmit}>
             <div className="entry-container" key={this.props.entry.id}>
-                <div className="entry">
+                <div className="entry-editing">
                     <div className="entry-words">
                         <h4 className="entry-word">{this.props.entry.wordOne}</h4>
                         <h4 className="entry-word">{this.props.entry.wordTwo}</h4>
@@ -84,9 +84,9 @@ class Entry extends Component {
                 </div>
                 <div>
                     <label>{this.props.entry.title}</label>
-                    <p>{this.props.entry.entry}</p>
-                    <button onClick={() => this.props.handleDeleteEntry(this.props.entry._id)}>Delete</button>
-                    <button onClick={() => this.handleEditing(this.props.entry._id)}>Edit</button>
+                    <p className="entry-paragraph">{this.props.entry.entry}</p>
+                    <button className="btn-cancel btn-small" onClick={() => this.props.handleDeleteEntry(this.props.entry._id)}>Delete</button>
+                    <button className="btn btn-small" onClick={() => this.handleEditing(this.props.entry._id)}>Edit</button>
                 </div>
             </div>
         </div>

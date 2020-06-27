@@ -29,6 +29,7 @@ footer {
   transition: all 250ms ease-in-out;
   cursor: pointer;
   text-decoration: none;
+  margin: 20px;
 }  
 
 .btn:hover {
