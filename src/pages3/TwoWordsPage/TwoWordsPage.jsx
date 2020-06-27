@@ -29,6 +29,7 @@ export default class TwoWords extends Component {
 
     return (
       <>
+      <div className="two-words-idea-box">
         <div className="two-words-container">
             <div className="word">{this.state.wordOne}</div>
             <div className="word">{this.state.wordTwo}</div>
@@ -39,6 +40,7 @@ export default class TwoWords extends Component {
         wordTwo={this.state.wordTwo} 
         handleAddEntry={this.props.handleAddEntry}
         user={this.props.user}/>
+      </div>
       </>
     );
   }

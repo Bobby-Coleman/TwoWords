@@ -7,8 +7,7 @@ export default class Home extends Component {
 
   render() {
     return <div className="home-container">
-       <h2 className="home-welcome">Welcome to Two Words</h2>
-        <p className="home-intro">The greatest asset humankind holds is our ability to be irrational. 
+        <p className="home-intro">The greatest asset humankind holds is the ability to be irrational. 
             It is this ability - to be totally and completely nonsensical - 
             that is the fertilizer in which the best ideas can grow. 
             Two Words dives headfirst into the absurd by presenting two entirely unrelated words,

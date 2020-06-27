@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import './IdeaBox.css'
 
 export default class IdeaBox extends Component {
 
@@ -51,7 +52,6 @@ export default class IdeaBox extends Component {
       <div className="idea-box">
         <form onSubmit={this.handleSubmit}>
             <div className="entry-group">
-                <label>Title</label>
                 <input 
                 className='entry-line'
                 placeholder="Think of a title"
@@ -64,7 +64,6 @@ export default class IdeaBox extends Component {
                 </input>
             </div>
             <div className="entry-group">
-                <label>Idea</label>
                 <textarea
                 className='entry-line'
                 placeholder="Write your idea!"

@@ -1,10 +1,16 @@
-.two-words-container {
+ .two-words-idea-box {
     /* background-color: teal; */
+    height: 70vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 60vh;
+    justify-content: space-around;
+}
+
+.two-words-container {
+    margin-top: 400px;
+    margin-bottom: 100px;
 }
 
 .word {
