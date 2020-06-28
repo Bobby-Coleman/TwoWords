@@ -30,6 +30,7 @@ class LoginPage extends Component {
 
     render() {
         return (
+        <div className="register">
           <div className="box-shadow"> 
             <div className="form-container">
                 <div className="header-group">
@@ -80,6 +81,7 @@ class LoginPage extends Component {
                 </form>
             </div>
           </div>
+        </div>
         )
     }
 }

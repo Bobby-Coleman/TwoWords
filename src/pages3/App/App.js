@@ -111,7 +111,7 @@ class App extends Component {
                 user={this.state.user}
               />
             }/>
-           <div className="register">
+         
            <Route exact path='/login' render={({ history }) =>
               <LoginPage
                 history={history}
@@ -124,7 +124,6 @@ class App extends Component {
                 handleSignupOrLogin={this.handleSignupOrLogin}
               />
             }/>
-           </div>
          </main>
        <footer>
            Copyright Ⓒ Bobby Coleman, 2020 
