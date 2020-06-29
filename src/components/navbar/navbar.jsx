@@ -12,7 +12,7 @@ const Navbar = (props) => {
             <NavLink to="/notebook" className="nav-link" exact activeClassName="active-nav-link">NOTEBOOK</NavLink>
             <NavLink to="/" className="nav-link" exact activeClassName="active-nav-link">STORY</NavLink>
             <NavLink to="" className="nav-link" onClick={props.handleLogout}>LOG OUT</NavLink>
-            <span className="nav-greeting">{props.user.name}</span>
+            <span className="nav-username">{props.user.name}</span>
             <div className="nav-toggle-button">
               <ToggleButton click={props.drawerClickHandler}/>
             </div>

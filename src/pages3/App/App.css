@@ -1,8 +1,8 @@
 
 .App {
   text-align: center;
-  width: 100vw;
-  height: 90vh;
+  width: 100%;
+  height: 100vh;
   background-image: linear-gradient(-90deg, #279dc8, 
   #61c4c9);
 }
@@ -14,12 +14,14 @@ footer {
   bottom: 0;
   margin: 0px;
   width: 100%;
-  font-size: 14px;
+  height: 2vh;
+  font-size: 200%;
   font-weight: 600;
+  color: white;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
-  background-image: linear-gradient(-90deg, #37b9e9, 
-  #61c4c9);
+  align-items: center;
 } 
 
 .App-main {
