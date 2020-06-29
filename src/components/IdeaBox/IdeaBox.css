@@ -1,10 +1,11 @@
 .idea-box {
     border: 2px solid #61c4c9;
     width: 25em;
+    background-color: #3ea7be;
 }
 
 .entry-group {
-    margin: 10px;
+    margin: 10px; 
 }
 
 .entry-line {

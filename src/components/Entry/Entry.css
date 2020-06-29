@@ -7,6 +7,7 @@
 .entry {
     height: auto;
     width: 30em;
+    background-color: #3ea7be;
 }
 
 .entry-editing {
@@ -15,7 +16,7 @@
 }
 
 .entry, .entry-editing {
-    box-shadow: 0px 0px 12px 2px rgba(15, 15, 15, 0.281);
+    box-shadow: 0px 0px 12px 2px #1417184f;
     margin: 20px;
     word-wrap: break-word;
 }
@@ -28,13 +29,15 @@
     padding: 10px;
     font-size: 20px;
     font-weight: 900;
-    color:  #3498db;
+    color:  White;
 }
 
 .entry-paragraph {
-    border: 3px solid #f1f1f1;
+    border: 3px solid #61c4c9;
     margin: 20px;
     padding: 20px;
+    color: white;
+    text-align: justify;
 }
 
 .btn-small {
