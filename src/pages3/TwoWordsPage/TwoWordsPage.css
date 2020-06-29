@@ -13,12 +13,7 @@
 }
 
 .word {
-    font-size: 60px;
+    font-size: 6em;
     font-weight: 800;
-    color: black;
-}
-
-.next-btn {
-    background-color: black;
-    margin-top: 60px;
+    color: white;
 }

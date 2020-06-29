@@ -33,7 +33,7 @@ export default class TwoWords extends Component {
         <div className="two-words-container">
             <div className="word">{this.state.wordOne}</div>
             <div className="word">{this.state.wordTwo}</div>
-            <button onClick={this.getWords} className="next-btn btn">></button>
+            <button onClick={this.getWords} className="btn">></button>
         </div>
         <IdeaBox 
         wordOne={this.state.wordOne} 

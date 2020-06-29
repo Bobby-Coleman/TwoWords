@@ -7,10 +7,14 @@ export default class Home extends Component {
 
   render() {
     return <div className="home-container">
-        <h1 className="home-welcome">
-        Block 
-        Writer's
-        Block</h1>
+        <div className="home-welcome-container">
+          <div className="home-welcome block">
+          Block 
+          </div>
+          <div className="home-welcome writers-block">
+          Writer's Block 
+          </div>
+        </div>
         <p className="home-intro">Two Words dives headfirst into the absurd by presenting two entirely unrelated words,
             so that new connections may be formed, and new inventions born.
             Take a minute to look at each pairing of random words.
@@ -20,6 +24,7 @@ export default class Home extends Component {
           <p className="home-animation">
           Start writing ideas for the next best {' '}
           <Typical 
+            className="home-animation-text"
             loop={Infinity}
             wrapper="b"
             steps={[

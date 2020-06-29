@@ -1,9 +1,27 @@
 .idea-box {
-    border: 2px solid #f1f1f1;
+    border: 2px solid #61c4c9;
     width: 25em;
-    height: 21em;
 }
 
 .entry-group {
     margin: 10px;
+}
+
+.entry-line {
+    background-color: #61c4c9;
+    color: white;
+}
+
+::-webkit-input-placeholder {
+    color: white;
+}
+
+textarea {
+    background-color: #61c4c9;
+    color: white;
+    border: none;
+}
+
+label {
+    color: white;
 }

@@ -11,18 +11,52 @@
 .home-intro {
     width: 600px;
     font-size: 25px;
-    font-weight: 700;
+    font-weight: 400;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    text-align: justify;
+    background-color:
+    #5cb6cf;
+    border: 2px solid #61c4c9;
+    padding: 20px;
 }
 
 .home-animation {
-    margin-bottom: 50px;
     font-size: 25px;
+    color: white;
+}
+
+.home-animation-text {
+    color: 
+    #ffbd26
 }
 
 .home-welcome {
     color: black;
-    font-size: 60px;
+    font-size: 6em;
     font-family: cooper;
+    color: white;
+    margin: 0;
 }
 
+.home-welcome-container {
+    margin-top: 10vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.block {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.writers-block {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
 
