@@ -1,7 +1,11 @@
 
 .App {
   text-align: center;
+  width: 100vw;
+  height: 90vh;
+  
 }
+
 
 footer {
   position: fixed;

@@ -9,12 +9,17 @@ class LoginPage extends Component {
     state = {
         email: '',
         pw: '',
+        err: '',
     }
 
     handleChange = (e) => {
         this.setState({
             [e.target.name]: e.target.value
         })
+    }
+
+    updateMessage = (err) => {
+        this.setState({ err })
     }
 
     handleSubmit = async(e) => {
@@ -24,7 +29,7 @@ class LoginPage extends Component {
             this.props.handleSignupOrLogin();
             this.props.history.push('/');
         } catch (err) {
-            alert('Invalid Credentials!');
+            this.updateMessage(err.message)
         }
     }
 
@@ -81,6 +86,7 @@ class LoginPage extends Component {
                 </form>
             </div>
           </div>
+        <div className="err-msg">{this.state.err}</div>
         </div>
         )
     }

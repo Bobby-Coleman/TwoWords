@@ -46,12 +46,6 @@
     text-decoration: underline;
 }
 
-/* .header-group {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-} */
-
 
 .form-group label {
     display: flex;
@@ -115,4 +109,11 @@ input:focus {
     margin: 20px;
     text-decoration: none;
     color:  #2386c8;
+}
+
+.err-msg {
+    font-size: 20px;
+    color: rgb(187, 187, 187);
+    font-weight: 800;
+    margin-top: 20px;
 }
