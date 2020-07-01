@@ -27,6 +27,10 @@ label {
     color: white;
 }
 
+.link-to-signup {
+    margin: 15px;
+}
+
 @media(min-width: 700px) {
     .idea-box {
         width: 25em;

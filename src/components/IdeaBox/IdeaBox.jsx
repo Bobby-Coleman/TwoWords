@@ -42,10 +42,10 @@ export default class IdeaBox extends Component {
       </button>
     } else {
       AuthButton = 
-      <>
+      <div className="link-to-signup">
         <label>Want to save an idea?</label>
         <Link to="/signup" className="btn btn-margin">SIGNUP</Link>
-      </>
+      </div>
     }
 
     return (
