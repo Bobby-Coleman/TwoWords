@@ -42,6 +42,8 @@ export default class Home extends Component {
               1300,
               "game",
               1300,
+              "pet name",
+              1300,
             ]}
             />
           </p>

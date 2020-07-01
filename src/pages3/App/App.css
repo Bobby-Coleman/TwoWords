@@ -1,33 +1,12 @@
-
-.App {
-  text-align: center;
-  width: 100%;
-  height: 100vh;
-  background-image: linear-gradient(-90deg, #279dc8, 
-  #61c4c9);
-}
-
-
 footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  margin: 0px;
-  width: 100%;
-  height: 2vh;
-  font-size: 200%;
-  font-weight: 600;
+  padding: 2em;
   color: white;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  font-size: 15px;
 } 
 
 .App-main {
   margin-top: 74px;
 }
-
 
 .btn, .btn-cancel {
   font-size: 21px;

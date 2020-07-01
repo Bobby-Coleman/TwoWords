@@ -1,7 +1,7 @@
 .idea-box {
     border: 2px solid #61c4c9;
-    width: 25em;
     background-color: #3ea7be;
+    margin: 20px;
 }
 
 .entry-group {
@@ -25,4 +25,10 @@ textarea {
 
 label {
     color: white;
+}
+
+@media(min-width: 700px) {
+    .idea-box {
+        width: 25em;
+    }
 }

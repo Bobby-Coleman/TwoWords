@@ -1,19 +1,19 @@
- .two-words-idea-box {
+ /* .two-words-idea-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     height: 60vh;
     width: 100vw;
-}
+} */
 
 .two-words-container {
-    margin-top: 400px;
-    margin-bottom: 100px;
+    margin-bottom: 1em;
+    margin-top: 6em;
 }
 
 .word {
-    font-size: 6em;
+    font-size: 3em;
     font-weight: 800;
     color: white;
 }

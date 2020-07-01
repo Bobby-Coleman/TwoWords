@@ -125,13 +125,13 @@ class App extends Component {
               />
             }/>
          </main>
+       </div>
        <footer>
            Copyright Ⓒ Bobby Coleman, 2020 
            <div className="footer-right">
            Until robots take over, enjoy!
            </div>
        </footer>
-       </div>
      </Router>
    );
  }
