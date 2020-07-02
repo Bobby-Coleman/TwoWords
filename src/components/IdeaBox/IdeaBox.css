@@ -31,12 +31,16 @@ label {
     margin: 15px;
 }
 
+.idea-box-disabled {
+    opacity: 0.6;
+}
+
+.btn-no-margin {
+    margin: 0;
+}
+
 @media(min-width: 700px) {
     .idea-box {
         width: 25em;
     }
-}
-
-.idea-box-disabled {
-    opacity: 0.6;
 }

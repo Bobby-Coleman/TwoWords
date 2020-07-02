@@ -37,7 +37,7 @@ export default class IdeaBox extends Component {
     
     if (isLoggedIn) {
       AuthButton = <button 
-      className="btn"
+      className="btn btn-no-margin"
       type="submit">
           Submit
       </button>
@@ -59,7 +59,7 @@ export default class IdeaBox extends Component {
       <div className="entry-group">
           <textarea
           className='entry-line'
-          placeholder="Write your idea!"
+          placeholder="Write your idea"
           name='entry'
           type='text'
           value={this.state.entry}
@@ -91,7 +91,7 @@ export default class IdeaBox extends Component {
       <div className="entry-group">
           <textarea disabled
           className='entry-line'
-          placeholder="Write your idea!"
+          placeholder="Write your idea"
           rows="10" cols="40"
           >
           </textarea>
