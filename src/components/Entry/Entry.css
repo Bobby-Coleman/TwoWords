@@ -11,8 +11,12 @@
 }
 
 .entry-editing {
-    height: 24em;
+    height: auto;
     width: 30em;
+}
+
+.entry-line {
+    margin-bottom: 5px;
 }
 
 .entry, .entry-editing {
@@ -30,6 +34,7 @@
     font-size: 20px;
     font-weight: 900;
     color:  White;
+    margin: 0;
 }
 
 .entry-paragraph {

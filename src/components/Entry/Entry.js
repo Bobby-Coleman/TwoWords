@@ -42,7 +42,6 @@ class Entry extends Component {
                         <h4 className="entry-word">{this.props.entry.wordTwo}</h4>
                     </div>   
                     <div>
-                        <label>Title:</label>
                         <input
                             className='entry-line'
                             placeholder="Think of a title"
@@ -53,7 +52,6 @@ class Entry extends Component {
                             required>
                         </input>
                         <div className="entry-group">
-                            <label>Idea</label>
                             <textarea
                             className='entry-line'
                             name='entry'
@@ -67,7 +65,7 @@ class Entry extends Component {
                         </div>
                     </div>
                     <button 
-                    className="btn"
+                    className="btn btn-small"
                     type="submit">
                         Submit
                     </button>
