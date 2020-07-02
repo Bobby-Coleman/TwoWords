@@ -8,16 +8,14 @@ export default class Home extends Component {
   render() {
     return <div className="home-container">
         <div className="home-welcome-container">
-          <div className="home-welcome block">
-          Block 
-          </div>
-          <div className="home-welcome writers-block">
-          Writer's Block 
+          <div className="home-welcome">
+          Block Writer's Block 
           </div>
         </div>
-        <p className="home-intro">Two Words dives headfirst into the absurd by presenting two entirely unrelated words,
-            so that new connections may be formed, and new inventions born.
-            Take a minute to look at each pairing of random words.
+        <p className="home-intro">Creativity is the ability to connect the unconnected. 
+            Thinking of good ideas is hard. Preconscieved notions about
+            the world can get in the way. Two Words will allow new thoughts to be formed and
+            new ideas born. Flip through each pairing of random words.
             Let your thoughts wander and write down whatever comes to mind, 
             and remember, don’t think too hard.
           </p>

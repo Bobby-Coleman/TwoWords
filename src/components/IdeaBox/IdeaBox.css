@@ -36,3 +36,7 @@ label {
         width: 25em;
     }
 }
+
+.idea-box-disabled {
+    opacity: 0.6;
+}
