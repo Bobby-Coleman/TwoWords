@@ -27,7 +27,7 @@ class LoginPage extends Component {
         try {
             await userService.login(this.state)
             this.props.handleSignupOrLogin();
-            this.props.history.push('/');
+            this.props.history.push('/two-words');
         } catch (err) {
             this.updateMessage(err.message)
         }
